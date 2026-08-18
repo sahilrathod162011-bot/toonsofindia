@@ -1,4 +1,1 @@
-index.html
-script.js
-style.css
-readme.md
+INDAIA OF TOONS
