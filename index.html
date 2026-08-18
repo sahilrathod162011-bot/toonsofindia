@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StreamBox — Free Movies</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#">STREAM<span>BOX</span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#movies">Movies</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="search-wrap">
+      <input id="search" type="search" placeholder="Search movies..." />
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">FREE • LEGAL • ONLINE</p>
+        <h1>Watch great movies,<br><span>without the price tag.</span></h1>
+        <p class="hero-text">
+          A clean streaming-style website for movies you own, have permission
+          to distribute, or that are in the public domain.
+        </p>
+        <a class="primary-btn" href="#movies">Browse Movies</a>
+      </div>
+    </section>
+
+    <section id="movies" class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">EXPLORE</p>
+          <h2>Movie Library</h2>
+        </div>
+        <select id="genreFilter">
+          <option value="all">All genres</option>
+          <option value="Drama">Drama</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Adventure">Adventure</option>
+          <option value="Sci-Fi">Sci-Fi</option>
+        </select>
+      </div>
+      <div id="movieGrid" class="movie-grid"></div>
+      <p id="emptyState" class="empty hidden">No movies found.</p>
+    </section>
+
+    <section id="about" class="about">
+      <div>
+        <p class="eyebrow">ABOUT</p>
+        <h2>Your own free streaming platform.</h2>
+      </div>
+      <p>
+        Replace the demo entries with films you are licensed to stream or
+        public-domain films. Add your own poster images and video URLs in
+        <code>script.js</code>.
+      </p>
+    </section>
+  </main>
+
+  <div id="playerModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card">
+      <button id="closePlayer" class="close" aria-label="Close">×</button>
+      <video id="videoPlayer" controls playsinline></video>
+      <div class="player-info">
+        <h2 id="playerTitle"></h2>
+        <p id="playerMeta"></p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 StreamBox. Built for legal movie streaming.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
